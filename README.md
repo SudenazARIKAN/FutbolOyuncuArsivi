@@ -39,28 +39,15 @@ GO
 Veritabanını Kullanın:
 Veritabanına bağlanarak T-SQL sorguları ile verileri listeleyebilir, güncelleyebilir veya yeni veriler ekleyebilirsiniz.
 
-
 Tablo Yapısı
-SQL dosyasında tanımlı olan ana tablolar (örnek):
+SQL dosyasında tanımlı olan ana tablolar:
 
 oyuncular: Oyuncuların adı, soyadı, doğum tarihi, mevki gibi bilgileri içerir.
 takımlar: Takımların adı, kuruluş yılı ve diğer bilgileri içerir.
 maçlar: Oynanan maçların tarihi, skoru ve ilgili takımları içerir.
+ve daha fazlası...
 
-(Detaylı tablo yapısı ve alanlar için futbol_oyuncu_arsivi.sql dosyasına bakınız.)
-Örnek T-SQL Sorguları
-Aşağıda, MSSQL'de kullanılabilecek bazı örnek sorgular yer almaktadır:
-
-Tüm oyuncuları listele:SELECT * FROM oyuncular;
-
-
-Belirli bir takıma ait oyuncuları listele:SELECT * FROM oyuncular WHERE takim_id = 1;
-
-
-Oyuncuların maç istatistiklerini birleştirme:SELECT o.ad, o.soyad, m.mac_tarihi, m.skor
-FROM oyuncular o
-JOIN maclar m ON o.takim_id = m.takim_id;
-
+(Detaylı tablo yapısı ve alanlar için create.sql dosyasına bakınız.)
 Lisans
 Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakınız.
 İletişim
